@@ -1,0 +1,27 @@
+@use 'primeicons/primeicons.css';
+
+:root {
+    // Layout
+    --max-width: 1440px;
+    --max-content-width: 1240px;
+
+    // Custom Colors
+    --color-custom-violet: #473adc;
+    
+    // Buttons
+    --p-button-secondary-background: var(--color-custom-violet,#473adc);
+    --p-button-secondary-hover-background:#8183f4;
+    --p-button-secondary-active-background: #8183f4;
+    --p-button-secondary-color: #fff;
+    --p-button-secondary-hover-color: #fff;
+    --p-button-secondary-active-color: #fff;
+        
+    // Dialog
+    --p-dialog-title-font-weight: 400;
+}
+body {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
