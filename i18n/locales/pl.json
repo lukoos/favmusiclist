@@ -12,5 +12,6 @@
   "Close": "Zamknij",
   "Title": "Tytuł",
   "Date": "Data",
-  "Title-is-required":"Tytuł jest wymagany"
+  "Title-is-required":"Tytuł jest wymagany",
+  "No-albums-found": "Brak albumów 👀"
 }

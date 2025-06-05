@@ -37,7 +37,6 @@ import { z } from 'zod';
 
 const { t } = useI18n();
 const store = useAlbumStore();
-const uniqueId: Ref<number> = useUniqueId();
 
 const initialValues = ref({
     title: ''
@@ -51,14 +50,13 @@ const resolver = ref(zodResolver(
 
 const onFormSubmit = ({ valid, values, reset }: { valid: boolean, values: { title?: string }, reset: () => void }) => {
     if (valid) {
-        store.addAlbum({
-            album: {
-                id: uniqueId.value,
-                title: values.title,
-                favourite: false,
-                date: new Date().toISOString()
-            }
-        });
+        const album = {
+            id: useUniqueId(),
+            title: values.title,
+            favourite: false,
+            date: new Date().toISOString()
+        };
+        store.addAlbum({album});
         reset();
     }
 };

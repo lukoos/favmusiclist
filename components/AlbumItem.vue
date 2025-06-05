@@ -1,9 +1,9 @@
 <template>
     <div 
         v-if="layout === 'list'"
-        class="flex justify-between items-center bg-white px-4 py-1 mb-3 rounded  hover:shadow transition-shadow duration-200 border-1 border-gray-200">
+        class="flex justify-between items-center bg-white px-4 py-1 mb-3 rounded  hover:shadow transition-shadow duration-200 border-1 border-gray-200 overflow-hidden">
         <p>{{ item.title }}</p>
-        <div>
+        <div class="min-w-28">
             <Button 
                 :style="{ color: item.favourite ? 'var(--color-custom-violet)' : 'var(--p-gray-300)' }" 
                 class="mr-1"
@@ -27,9 +27,9 @@
     </div>
     <div 
         v-else
-        class="flex flex-wrap justify-center aspect-square relative rounded hover:shadow transition-shadow duration-200 border-1 border-gray-200 bg-white">
+        class="flex flex-wrap justify-center aspect-square p-4 relative rounded hover:shadow transition-shadow duration-200 border-1 border-gray-200 bg-white overflow-hidden">
         <div 
-            class="w-full flex justify-between absolute">
+            class="w-full flex justify-between absolute top-0">
             <Button 
                 :style="{ color: item.favourite ? 'var(--color-custom-violet)' : 'var(--p-gray-300)' }" 
                 class="mr-2"

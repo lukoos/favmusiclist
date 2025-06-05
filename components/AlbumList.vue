@@ -33,13 +33,17 @@
             </div>
         </div>
 
-        <div :class="[layout === AlbumLayout.GRID ? 'grid-cols-2 md:grid-cols-5 gap-5 ' : 'grid-cols-1', 'grid']">
+        <div v-if="albums.length > 0" 
+            :class="[layout === AlbumLayout.GRID ? 'grid-cols-2 md:grid-cols-5 gap-5 ' : 'grid-cols-1', 'grid']">
             <AlbumItem 
                 v-for="album in albums" 
                 :key="album.id" 
                 :item="album" 
                 :layout="layout"
             />
+        </div>
+        <div v-else class="text-center">
+            <p class="text-lg text-neutral-400">{{ $t('No-albums-found') }}</p>
         </div>
     </div>
 </template>

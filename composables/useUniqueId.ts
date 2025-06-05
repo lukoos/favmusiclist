@@ -1,3 +1,3 @@
 export const useUniqueId = ()=> {
-  return useState('uniqueId', () => Date.now() + Math.floor(Math.random() * 1000));
+  return Date.now() + Math.floor(Math.random() * 1000);
 }
