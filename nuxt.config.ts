@@ -1,6 +1,17 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 // import Aura from "@primeuix/themes/aura";
 export default defineNuxtConfig({
+  app: {
+    head: {
+      title: 'Favourite Music List App', 
+      meta: [
+        { name: "viewport", content: "width=device-width, initial-scale=1" },
+        { charset: "utf-8" },
+        { name: "theme-color", content: "#ffffff" },
+        { name: "description", content: "A simple app to manage your favourite music albums." },
+      ],
+    }
+  },
   compatibilityDate: "2025-05-15",
   devtools: { enabled: true },
   css: ["~/assets/style/main.scss"],
