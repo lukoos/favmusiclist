@@ -10,7 +10,9 @@ export const useAlbumStore = defineStore("album", {
   },
   actions: {
     addAlbum(payload: { album: Album }) {
-      this.albums.push(payload.album);
+      if(payload.album.id && this.albums.every((album) => album.id !== payload.album.id)) {
+        this.albums.push(payload.album);
+      }
     },
     removeAlbumById(id: number) {
       this.albums = this.albums.filter((album) => album.id !== id);
