@@ -7,17 +7,6 @@
 
     // Custom Colors
     --color-custom-violet: #473adc;
-    
-    // Buttons
-    --p-button-secondary-background: var(--color-custom-violet,#473adc);
-    --p-button-secondary-hover-background:#8183f4;
-    --p-button-secondary-active-background: #8183f4;
-    --p-button-secondary-color: #fff;
-    --p-button-secondary-hover-color: #fff;
-    --p-button-secondary-active-color: #fff;
-        
-    // Dialog
-    --p-dialog-title-font-weight: 400;
 }
 
 body {
@@ -25,4 +14,18 @@ body {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+}
+
+.p-button-secondary {
+    --p-button-secondary-background: var(--color-custom-violet,#473adc);
+    --p-button-secondary-hover-background:#8183f4;
+    --p-button-secondary-active-background: #8183f4;
+    --p-button-secondary-color: #fff;
+    --p-button-secondary-border-border-color: var(--color-custom-violet,#473adc);
+    --p-button-secondary-hover-color: #fff;
+    --p-button-secondary-active-color: #fff;
+}
+
+.p-dialog-title {
+    --p-dialog-title-font-weight: 400;
 }
