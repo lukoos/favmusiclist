@@ -1,9 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 // import Aura from "@primeuix/themes/aura";
 export default defineNuxtConfig({
-  app: {
-    baseURL: '/favmusiclist/',
-  },
   compatibilityDate: "2025-05-15",
   devtools: { enabled: true },
   css: ["~/assets/style/main.scss"],
